@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Home() {
   return (
     <main className="homepage">
@@ -6,9 +8,9 @@ export default function Home() {
         Select one answer for each question, and see how many answers are
         correct
       </p>
-      <a href="/quiz" target="_blank" rel="noopener noreferrer">
+      <Link to="/quiz" target="_blank" rel="noopener noreferrer">
         Start Quiz
-      </a>
+      </Link>
     </main>
   );
 }
