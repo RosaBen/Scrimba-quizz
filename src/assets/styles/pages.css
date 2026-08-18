@@ -38,11 +38,26 @@
   overflow: hidden;
 }
 
-.homepage {
+a {
+  color: var(--secondary-color);
+  background: var(--main-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px var(--main-color);
+}
+
+/* Homepage */
+main {
   padding: 1.5rem;
-  max-height: 500px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.homepage {
+  max-height: 500px;
   align-items: center;
   justify-content: center;
 }
@@ -60,16 +75,13 @@
   text-align: center;
 }
 
-.homepage a {
-  color: var(--secondary-color);
-  background: var(--main-color);
-  padding: 0.5rem 1.2rem;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 2px 2px 5px var(--main-color);
+/* Question page */
+
+.quiz-page {
+  height: 700px;
 }
 
+/* Pages design */
 .bubbles {
   opacity: 0.5;
 }
