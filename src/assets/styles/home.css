@@ -1,0 +1,42 @@
+:root {
+  --main-color: #293264;
+  --secondary-color: #f5f7fb;
+}
+
+.container {
+  background: var(--secondary-color);
+  margin-top: 3rem;
+  border-radius: 1rem;
+}
+
+.homepage {
+  padding: 1.5rem;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.homepage p {
+  font-size: 1.2rem;
+  width: 300px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.homepage a {
+  color: var(--secondary-color);
+  background: var(--main-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px var(--main-color);
+}
