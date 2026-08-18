@@ -1,0 +1,96 @@
+:root {
+  --main-color: #293264;
+  --secondary-color: #f5f7fb;
+  --blob-one: linear-gradient(to right, #fbed96, #abecd6);
+  --blob-two: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+  --blob-shape: shape(
+    from 87.45% 45.02%,
+    curve to 92.48% 56.45% with 90.99% 50%,
+    smooth to 92.05% 69.35%,
+    smooth to 82.42% 77.15%,
+    smooth to 71.01% 83.22%,
+    smooth to 61.91% 91.53%,
+    smooth to 49.74% 96.95%,
+    smooth to 38.7% 91.46%,
+    smooth to 25.99% 85.79%,
+    smooth to 15.38% 80.54%,
+    smooth to 14.3% 66.9%,
+    smooth to 13.33% 55.08%,
+    smooth to 11.2% 44.3%,
+    smooth to 11.95% 32.32%,
+    smooth to 16.84% 21.25%,
+    smooth to 27.31% 15.38%,
+    smooth to 38.83% 11.12%,
+    smooth to 50.39% 5.23%,
+    smooth to 62.85% 5.6%,
+    smooth to 72.7% 14.03%,
+    smooth to 79.11% 24.51%,
+    smooth to 82.8% 34.84%,
+    smooth to 87.45% 45.02%
+  );
+}
+
+.container {
+  background: var(--secondary-color);
+  margin-top: 3rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage {
+  padding: 1.5rem;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.homepage p {
+  font-size: 1.2rem;
+  width: 300px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.homepage a {
+  color: var(--secondary-color);
+  background: var(--main-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px var(--main-color);
+}
+
+.bubbles {
+  opacity: 0.5;
+}
+
+.bubbles div {
+  width: 200px;
+  height: 200px;
+  clip-path: var(--blob-shape);
+  aspect-ratio: 1;
+}
+
+.bubbles div:nth-child(1) {
+  background: var(--blob-one);
+  position: absolute;
+  top: -4rem;
+  right: -4rem;
+}
+
+.bubbles div:nth-child(2) {
+  background: var(--blob-two);
+  position: absolute;
+  bottom: -4rem;
+  left: -4rem;
+}
