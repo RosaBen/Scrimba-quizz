@@ -1,6 +1,8 @@
 :root {
   --main-color: #293264;
   --secondary-color: #f5f7fb;
+  --tertiary-color: #dbdef0;
+  --quaternary-color: #4d5b9e;
   --blob-one: linear-gradient(to right, #fbed96, #abecd6);
   --blob-two: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
   --blob-shape: shape(
@@ -85,6 +87,37 @@ main {
   align-self: center;
   position: absolute;
   bottom: 1rem;
+}
+
+.question {
+  margin: 0.5rem 1rem;
+  max-width: calc(var(--max-width-desktop) - 150px);
+  border-bottom: 2px solid var(--tertiary-color);
+  padding-bottom: 0.5rem;
+}
+
+.question p {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.options-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.options-btn button {
+  border: 2px solid var(--quaternary-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  background: var(--secondary-color);
+  min-width: 100px;
+  color: var(--main-color);
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 /* Pages design */

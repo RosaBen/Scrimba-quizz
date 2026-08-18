@@ -4,7 +4,7 @@ export default function Questions({ data, currentIndex, setIndex }) {
       return <button key={i}>{opt}</button>;
     });
     return (
-      <div className={`question${index}`} key={index}>
+      <div className={`question${index} question`} key={index}>
         <p>{q.question}</p>
         <div className="options-btn">{optionsList}</div>
       </div>
