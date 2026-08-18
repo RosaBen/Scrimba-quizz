@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 // import pages
 import Home from "./pages/Home";
 import QuestionsPage from "./pages/QuestionsPage";
+import Results from "./pages/Results";
 
 // Import scripts
 import { quiz } from "./assets/scripts/data";
@@ -33,6 +34,16 @@ function App() {
           path="/quiz"
           element={
             <QuestionsPage
+              data={data}
+              currentIndex={currentQIndex}
+              setIndex={setCurrentQIndex}
+            />
+          }
+        />
+        <Route
+          path="results"
+          element={
+            <Results
               data={data}
               currentIndex={currentQIndex}
               setIndex={setCurrentQIndex}

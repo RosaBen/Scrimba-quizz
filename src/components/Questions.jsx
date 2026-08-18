@@ -1,4 +1,5 @@
 export default function Questions({ data, currentIndex, setIndex }) {
+  console.log(data);
   const questionsList = data.map((q, index) => {
     const optionsList = q.options.map((opt, i) => {
       return <button key={i}>{opt}</button>;

@@ -50,12 +50,12 @@ a {
   box-shadow: 2px 2px 5px var(--main-color);
 }
 
-/* Homepage */
 main {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
+/* Homepage */
 
 .homepage {
   max-height: 500px;
@@ -89,6 +89,30 @@ main {
   bottom: 1rem;
 }
 
+/* results page */
+
+.results-page {
+  height: 700px;
+  align-items: flex-start;
+}
+
+.score {
+  position: absolute;
+  bottom: 1rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.score p {
+  font-size: 1rem;
+  color: var(--main-color);
+  font-weight: 700;
+}
+/* quiz design */
+
 .question {
   margin: 0.5rem 1rem;
   max-width: calc(var(--max-width-desktop) - 150px);
@@ -107,6 +131,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .options-btn button {
@@ -118,6 +143,7 @@ main {
   color: var(--main-color);
   letter-spacing: 1px;
   font-weight: 500;
+  font-size: 1rem;
 }
 
 /* Pages design */
