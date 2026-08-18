@@ -4,7 +4,7 @@ export default function Home() {
       <main className="homepage">
         <h1>Quizzical</h1>
         <p>
-          Select one anwser for each question, and see how many answers are
+          Select one answer for each question, and see how many answers are
           correct
         </p>
         <a href="/questions">Start Quiz</a>
