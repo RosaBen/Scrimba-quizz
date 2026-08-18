@@ -1,6 +1,6 @@
 // import React Components
 import { Routes, Route } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // import pages
 import Home from "./pages/Home";
@@ -16,17 +16,29 @@ import "./assets/styles/pages.css";
 
 function App() {
   const [data, setData] = useState([]);
-  const newDataArray = quiz.map((obj) => ({
-    ...obj,
-    options: shuffleArray(obj.options),
-  }));
-  console.log(newDataArray);
+  const [currentQIndex, setCurrentQIndex] = useState(0);
+  useEffect(() => {
+    const newDataArray = quiz.map((obj) => ({
+      ...obj,
+      options: shuffleArray(obj.options),
+    }));
+    setData(newDataArray);
+  }, []);
 
   return (
     <div className="container">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/quiz" element={<QuestionsPage />} />
+        <Route
+          path="/quiz"
+          element={
+            <QuestionsPage
+              data={data}
+              currentIndex={currentQIndex}
+              setIndex={setCurrentQIndex}
+            />
+          }
+        />
       </Routes>
       <div className="bubbles">
         <div></div>
