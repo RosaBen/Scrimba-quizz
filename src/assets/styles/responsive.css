@@ -1,0 +1,36 @@
+@media screen and (min-width: 901px) {
+  .container {
+    max-width: var(--max-width-tablet);
+    margin-bottom: 0;
+  }
+  .quiz-page,
+  .results-page {
+    height: 700px;
+    padding-bottom: 0;
+  }
+
+  .question {
+    max-width: calc(var(--max-width-desktop) - 150px);
+  }
+  .results-page {
+    margin-bottom: 0;
+  }
+  .options-btn {
+    flex-wrap: no-wrap;
+    gap: 0;
+  }
+}
+
+/* 
+
+
+
+
+
+@media screen and (min-width: 1201px) {
+  .container {
+    max-width: var(--max-width-desktop);
+  }
+
+
+} */

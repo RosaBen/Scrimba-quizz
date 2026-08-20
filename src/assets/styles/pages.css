@@ -39,6 +39,7 @@
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -80,8 +81,8 @@ main {
 /* Question page */
 
 .quiz-page {
-  height: 700px;
   align-items: flex-start;
+  padding-bottom: 5rem;
 }
 
 .quiz-page a {
@@ -93,8 +94,9 @@ main {
 /* results page */
 
 .results-page {
-  height: 700px;
   align-items: flex-start;
+  padding-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .score {
@@ -116,13 +118,13 @@ main {
 
 .question {
   margin: 0.5rem 1rem;
-  max-width: calc(var(--max-width-desktop) - 150px);
+  max-width: calc(var(--max-width-mobile) - 64px);
   border-bottom: 2px solid var(--tertiary-color);
   padding-bottom: 0.5rem;
 }
 
 .question p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--main-color);
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -130,6 +132,8 @@ main {
 
 .options-btn {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 0.5rem;

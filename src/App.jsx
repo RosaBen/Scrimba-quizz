@@ -9,7 +9,7 @@ import Results from "./pages/Results";
 
 // Import scripts
 import { quiz } from "./assets/scripts/data";
-import { shuffleArray, selectItems, decodeHtml } from "./assets/scripts/utils";
+import { shuffleArray, selectItems } from "./assets/scripts/utils";
 
 // Styles
 import "./assets/styles/index.css";
@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple",
+      "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple",
     )
       .then((res) => res.json())
       .then((d) => {
@@ -35,8 +35,8 @@ function App() {
             q.correct_answer,
           ]);
           return {
-            question: decodeHtml(q.question),
-            correct: decodeHtml(q.correct_answer),
+            question: q.question,
+            correct: q.correct_answer,
             options: newArray,
           };
         });
@@ -56,7 +56,6 @@ function App() {
               path={pathname}
               answers={answers}
               setAnswers={setAnswers}
-              decode={decodeHtml}
             />
           }
         />

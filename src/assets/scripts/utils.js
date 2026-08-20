@@ -11,10 +11,10 @@ export function selectItems (arr, count) {
 
 }
 
-// // decode entité html 
-// export function decodeHtml (text) {
-//   const textArea = document.createElement("textarea");
-//   textArea.innerHTML = text;
-//   return textArea.value;
+// decode entité html 
+export function decodeHtml (text) {
+  const textArea = document.createElement("textarea");
+  textArea.innerHTML = text;
+  return textArea.value;
 
-// }
+}
