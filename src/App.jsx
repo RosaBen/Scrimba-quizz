@@ -17,7 +17,6 @@ import "./assets/styles/pages.css";
 
 function App() {
   const [data, setData] = useState([]);
-  // const [currentQIndex, setCurrentQIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const { pathname } = useLocation();
 
@@ -38,8 +37,6 @@ function App() {
           element={
             <QuestionsPage
               data={data}
-              // currentIndex={currentQIndex}
-              // setIndex={setCurrentQIndex}
               path={pathname}
               answers={answers}
               setAnswers={setAnswers}
@@ -51,8 +48,8 @@ function App() {
           element={
             <Results
               data={data}
-              // currentIndex={currentQIndex}
-              // setIndex={setCurrentQIndex}
+              answers={answers}
+              setAnswers={setAnswers}
               path={pathname}
             />
           }
