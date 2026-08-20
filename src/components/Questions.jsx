@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { useEffect } from "react";
+import { decodeHtml } from "../assets/scripts/utils";
 
 export default function Questions({ data, path, answers, setAnswers }) {
   const questionsList = data.map((q, index) => {
@@ -36,14 +37,14 @@ export default function Questions({ data, path, answers, setAnswers }) {
           className={classOption}
           disabled={path === "/results" ? "disabled" : ""}
         >
-          {opt}
+          {decodeHtml(opt)}
         </button>
       );
     });
 
     return (
       <div className={`question${index} question`} key={index}>
-        <p>{q.question}</p>
+        <p>{decodeHtml(q.question)}</p>
         <div className="options-btn">{optionsList}</div>
       </div>
     );
