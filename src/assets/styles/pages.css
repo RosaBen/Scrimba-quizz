@@ -151,9 +151,21 @@ main {
   background: var(--answer);
 }
 
-.options-btn button:hover {
+.options-btn .correct {
+  background-color: green;
+}
+
+.options-btn .incorrect {
+  background-color: red;
+}
+
+.options-btn button:hover:not(.option:disabled) {
   background: var(--main-color);
   color: var(--secondary-color);
+}
+
+.option:disabled {
+  cursor: none;
 }
 
 /* Pages design */

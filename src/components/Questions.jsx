@@ -1,40 +1,46 @@
 import clsx from "clsx";
 
-export default function Questions({
-  data,
-  // currentIndex,
-  // setIndex,
-  path,
-  answers,
-  setAnswers,
-}) {
+export default function Questions({ data, path, answers, setAnswers }) {
   const questionsList = data.map((q, index) => {
     const currentQuestion = index;
     const correctAnswer = q.correct;
-    console.log(correctAnswer);
+    let classOption;
     const optionsList = q.options.map((opt, i) => {
-      let classOption;
       function handleSelect(value, questionIndex) {
         const newAnswers = [...answers];
         newAnswers[questionIndex] = value;
         setAnswers(newAnswers);
       }
-      if (answers.includes(opt) && path === "/quiz") {
-        classOption = clsx("option", "answer");
-      } else {
-        classOption = clsx("option");
+      if (path === "/quiz") {
+        classOption =
+          answers.includes(opt) && path === "/quiz"
+            ? clsx("option", "answer")
+            : clsx("option");
+      } else if (path === "/results") {
+        // console.log(opt, "===>", answers[index]);
+        if (
+          (opt === answers[index] && answers[index] === correctAnswer) ||
+          opt === correctAnswer
+        ) {
+          classOption = clsx("option", "correct");
+        } else if (opt === answers[index] && answers[index] !== correctAnswer) {
+          classOption = clsx("option", "incorrect");
+        } else {
+          classOption = clsx("option");
+        }
       }
-
       return (
         <button
           key={i}
           onClick={() => handleSelect(opt, currentQuestion)}
           className={classOption}
+          disabled={path === "/results" ? "disabled" : ""}
         >
           {opt}
         </button>
       );
     });
+
     return (
       <div className={`question${index} question`} key={index}>
         <p>{q.question}</p>
