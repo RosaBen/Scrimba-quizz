@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useEffect } from "react";
 
 export default function Questions({ data, path, answers, setAnswers }) {
   const questionsList = data.map((q, index) => {
@@ -17,7 +18,6 @@ export default function Questions({ data, path, answers, setAnswers }) {
             ? clsx("option", "answer")
             : clsx("option");
       } else if (path === "/results") {
-        // console.log(opt, "===>", answers[index]);
         if (
           (opt === answers[index] && answers[index] === correctAnswer) ||
           opt === correctAnswer

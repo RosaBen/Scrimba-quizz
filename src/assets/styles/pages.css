@@ -152,11 +152,14 @@ main {
 }
 
 .options-btn .correct {
-  background-color: green;
+  background-color: rgba(141, 190, 141, 0.4);
+  border-color: green;
 }
 
 .options-btn .incorrect {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
+  color: var(--main-color);
+  border-color: red;
 }
 
 .options-btn button:hover:not(.option:disabled) {
