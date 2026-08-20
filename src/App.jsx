@@ -1,5 +1,5 @@
 // import React Components
-import { Routes, Route } from "react-router";
+import { Routes, Route, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 
 // import pages
@@ -17,7 +17,10 @@ import "./assets/styles/pages.css";
 
 function App() {
   const [data, setData] = useState([]);
-  const [currentQIndex, setCurrentQIndex] = useState(0);
+  // const [currentQIndex, setCurrentQIndex] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const { pathname } = useLocation();
+
   useEffect(() => {
     const newDataArray = quiz.map((obj) => ({
       ...obj,
@@ -35,8 +38,11 @@ function App() {
           element={
             <QuestionsPage
               data={data}
-              currentIndex={currentQIndex}
-              setIndex={setCurrentQIndex}
+              // currentIndex={currentQIndex}
+              // setIndex={setCurrentQIndex}
+              path={pathname}
+              answers={answers}
+              setAnswers={setAnswers}
             />
           }
         />
@@ -45,8 +51,9 @@ function App() {
           element={
             <Results
               data={data}
-              currentIndex={currentQIndex}
-              setIndex={setCurrentQIndex}
+              // currentIndex={currentQIndex}
+              // setIndex={setCurrentQIndex}
+              path={pathname}
             />
           }
         />
