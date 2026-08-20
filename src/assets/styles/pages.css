@@ -57,6 +57,21 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+footer {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 1.5rem;
+}
+
+footer p a {
+  background: var(--quaternary-color);
+}
 /* Homepage */
 
 .homepage {

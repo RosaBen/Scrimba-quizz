@@ -2,10 +2,11 @@
 import { Routes, Route, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 
-// import pages
+// import pages/components
 import Home from "./pages/Home";
 import QuestionsPage from "./pages/QuestionsPage";
 import Results from "./pages/Results";
+import Footer from "./components/Footer";
 
 // Import scripts
 import { quiz, difficulty } from "./assets/scripts/data";
@@ -110,37 +111,40 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/quiz"
-          element={
-            <QuestionsPage
-              data={data}
-              path={pathname}
-              answers={answers}
-              setAnswers={setAnswers}
-            />
-          }
-        />
-        <Route
-          path="results"
-          element={
-            <Results
-              data={data}
-              answers={answers}
-              setAnswers={setAnswers}
-              path={pathname}
-            />
-          }
-        />
-      </Routes>
-      <div className="bubbles">
-        <div></div>
-        <div></div>
+    <>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/quiz"
+            element={
+              <QuestionsPage
+                data={data}
+                path={pathname}
+                answers={answers}
+                setAnswers={setAnswers}
+              />
+            }
+          />
+          <Route
+            path="results"
+            element={
+              <Results
+                data={data}
+                answers={answers}
+                setAnswers={setAnswers}
+                path={pathname}
+              />
+            }
+          />
+        </Routes>
+        <div className="bubbles">
+          <div></div>
+          <div></div>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
