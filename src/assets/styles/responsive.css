@@ -3,6 +3,7 @@
     max-width: var(--max-width-tablet);
     margin-bottom: 0;
   }
+
   .quiz-page,
   .results-page {
     height: 700px;
@@ -17,20 +18,12 @@
   }
   .options-btn {
     flex-wrap: no-wrap;
-    gap: 0;
+    gap: 1rem;
   }
 }
-
-/* 
-
-
-
-
 
 @media screen and (min-width: 1201px) {
   .container {
     max-width: var(--max-width-desktop);
   }
-
-
-} */
+}

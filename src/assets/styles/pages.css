@@ -81,7 +81,7 @@ main {
 /* Question page */
 
 .quiz-page {
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 5rem;
 }
 
@@ -94,7 +94,7 @@ main {
 /* results page */
 
 .results-page {
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 5rem;
   margin-bottom: 1rem;
 }

@@ -37,7 +37,7 @@ export default function Questions({ data, path, answers, setAnswers }) {
           className={classOption}
           disabled={path === "/results" ? "disabled" : ""}
         >
-          {opt}
+          {decodeHtml(opt)}
         </button>
       );
     });

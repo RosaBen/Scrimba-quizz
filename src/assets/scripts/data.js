@@ -25,3 +25,7 @@ export const quiz = [
     correct: "Adiós"
   },
 ];
+
+export const difficulty = ["easy", "medium", "hard"];
+
+export const categories = ["9",];
