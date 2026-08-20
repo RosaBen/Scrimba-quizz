@@ -3,6 +3,7 @@
   --secondary-color: #f5f7fb;
   --tertiary-color: #dbdef0;
   --quaternary-color: #4d5b9e;
+  --answer: #d6dbf5;
   --blob-one: linear-gradient(to right, #fbed96, #abecd6);
   --blob-two: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
   --blob-shape: shape(
@@ -144,6 +145,15 @@ main {
   letter-spacing: 1px;
   font-weight: 500;
   font-size: 1rem;
+}
+
+.options-btn .answer {
+  background: var(--answer);
+}
+
+.options-btn button:hover {
+  background: var(--main-color);
+  color: var(--secondary-color);
 }
 
 /* Pages design */
