@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after,
+h1,
+h2,
+h3,
+p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  border: none;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: grey;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-mobile);
+  margin: 0 auto;
+}
+
+:root,
+.light-theme {
+  --max-width-mobile: 375px;
+  --max-width-tablet: 900px;
+  --max-width-desktop: 1200px;
+}

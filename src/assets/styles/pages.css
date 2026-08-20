@@ -1,0 +1,217 @@
+:root {
+  --main-color: #293264;
+  --secondary-color: #f5f7fb;
+  --tertiary-color: #dbdef0;
+  --quaternary-color: #4d5b9e;
+  --answer: #d6dbf5;
+  --blob-one: linear-gradient(to right, #fbed96, #abecd6);
+  --blob-two: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+  --blob-shape: shape(
+    from 87.45% 45.02%,
+    curve to 92.48% 56.45% with 90.99% 50%,
+    smooth to 92.05% 69.35%,
+    smooth to 82.42% 77.15%,
+    smooth to 71.01% 83.22%,
+    smooth to 61.91% 91.53%,
+    smooth to 49.74% 96.95%,
+    smooth to 38.7% 91.46%,
+    smooth to 25.99% 85.79%,
+    smooth to 15.38% 80.54%,
+    smooth to 14.3% 66.9%,
+    smooth to 13.33% 55.08%,
+    smooth to 11.2% 44.3%,
+    smooth to 11.95% 32.32%,
+    smooth to 16.84% 21.25%,
+    smooth to 27.31% 15.38%,
+    smooth to 38.83% 11.12%,
+    smooth to 50.39% 5.23%,
+    smooth to 62.85% 5.6%,
+    smooth to 72.7% 14.03%,
+    smooth to 79.11% 24.51%,
+    smooth to 82.8% 34.84%,
+    smooth to 87.45% 45.02%
+  );
+}
+
+.container {
+  background: var(--secondary-color);
+  margin-top: 3rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(--secondary-color);
+  background: var(--main-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px var(--main-color);
+}
+
+main {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 1.5rem;
+}
+
+footer p a {
+  background: var(--quaternary-color);
+}
+/* Homepage */
+
+.homepage {
+  max-height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.homepage p {
+  font-size: 1.2rem;
+  width: 300px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Question page */
+
+.quiz-page {
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.quiz-page a {
+  align-self: center;
+  position: absolute;
+  bottom: 1rem;
+}
+
+/* results page */
+
+.results-page {
+  align-items: center;
+  padding-bottom: 5rem;
+  margin-bottom: 1rem;
+}
+
+.score {
+  position: absolute;
+  bottom: 1rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.score p {
+  font-size: 1rem;
+  color: var(--main-color);
+  font-weight: 700;
+}
+/* quiz design */
+
+.question {
+  margin: 0.5rem 1rem;
+  max-width: calc(var(--max-width-mobile) - 64px);
+  border-bottom: 2px solid var(--tertiary-color);
+  padding-bottom: 0.5rem;
+}
+
+.question p {
+  font-size: 1rem;
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.options-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.options-btn button {
+  border: 2px solid var(--quaternary-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  background: var(--secondary-color);
+  min-width: 100px;
+  color: var(--main-color);
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.options-btn .answer {
+  background: var(--answer);
+}
+
+.options-btn .correct {
+  background-color: rgba(141, 190, 141, 0.4);
+  border-color: green;
+}
+
+.options-btn .incorrect {
+  background-color: rgba(255, 0, 0, 0.3);
+  color: var(--main-color);
+  border-color: red;
+}
+
+.options-btn button:hover:not(.option:disabled) {
+  background: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.option:disabled {
+  cursor: none;
+}
+
+/* Pages design */
+.bubbles {
+  opacity: 0.5;
+}
+
+.bubbles div {
+  width: 200px;
+  height: 200px;
+  clip-path: var(--blob-shape);
+  aspect-ratio: 1;
+}
+
+.bubbles div:nth-child(1) {
+  background: var(--blob-one);
+  position: absolute;
+  top: -4rem;
+  right: -4rem;
+}
+
+.bubbles div:nth-child(2) {
+  background: var(--blob-two);
+  position: absolute;
+  bottom: -4rem;
+  left: -4rem;
+}
